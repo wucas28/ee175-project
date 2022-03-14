@@ -1,0 +1,3 @@
+# ee175-project
+ee175 project ucr
+The reason we chose this approach is because of the limited RAM of the arduino uno, featuring only 2000 bytes. In order for the user input portion of the project to work we need to be able to essentially match a character to a led matrix and then print the led matrix 1 column at a time. Our initial design matched the user input to the led matrix using pointers and a direct 1 to 1 array of the resulting matrix which was way too inefficient. So we did some research and found this way which featured breaking each column down into 1 binary number then decoding it when printing. While theoretically this would take more time, it saved heavily in the RAM department and the time taken is negligible.
